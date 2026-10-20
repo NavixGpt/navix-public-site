@@ -1,88 +1,677 @@
-# NAVIX Privacy Policy
 
-**Last updated:** 20 October 2026
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d0f">
 
-## 1. Introduction
+  <title>Privacy Policy | NAVIX</title>
+  <meta name="description" content="Read the NAVIX Privacy Policy to understand how your vehicle, trip, fuel and service records are handled.">
 
-NAVIX is a digital logbook and vehicle-management application designed to help users record vehicle trips, mileage, fuel expenses, servicing and related records.
+  <style>
+    :root {
+      --bg: #080d0f;
+      --panel: #10191d;
+      --panel-light: #142126;
+      --green: #59ed35;
+      --green-soft: rgba(89, 237, 53, 0.10);
+      --text: #f2f5f4;
+      --muted: #aab7ba;
+      --border: #26383e;
+      --max-width: 1000px;
+    }
 
-This Privacy Policy explains how NAVIX handles information when you use the application.
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-## 2. Information We Handle
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
 
-Depending on the features you use, NAVIX may store:
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      min-height: 100vh;
+    }
 
-- Your name and surname.
-- Account authentication information managed by the sign-in provider.
-- Vehicle details, including registration and odometer readings.
-- Trip dates, distances and business or personal classifications.
-- Fuel transactions, expenses and service records.
-- Invoices, photographs and documents you choose to save.
-- Business or company information you choose to provide.
-- Backup preferences and application settings.
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
 
-Only provide information that is necessary for your use of the application.
+    a:hover {
+      text-decoration: underline;
+    }
 
-## 3. Location and Trip Information
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 13, 15, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
 
-If you use features that record or calculate trips, NAVIX may process trip-related information, including dates, distances and other information required by those features.
+    .nav-container {
+      width: min(1200px, 92%);
+      min-height: 76px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
 
-Location access, where applicable, depends on the permissions you grant and the features enabled on your device.
+    .logo {
+      color: var(--text);
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      white-space: nowrap;
+    }
 
-## 4. How Information Is Used
+    .logo span {
+      color: var(--green);
+    }
 
-NAVIX uses information to:
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
 
-- Maintain your digital vehicle logbook.
-- Record vehicle servicing, fuel and expenses.
-- Generate reports and spreadsheet exports.
-- Support account access and application functionality.
-- Create and restore backups when supported features are used.
-- Improve reliability, protect user data and troubleshoot problems.
+    .nav-links a {
+      color: #c4ced0;
+      font-size: 14px;
+      transition: color 0.2s ease;
+    }
 
-## 5. Storage and Backups
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--green);
+    }
 
-NAVIX may store information locally on your device and may use authentication or cloud services where those features are enabled.
+    .hero {
+      padding: 90px 20px 65px;
+      text-align: center;
+      background:
+        radial-gradient(
+          ellipse at 50% 0%,
+          rgba(53, 151, 43, 0.20),
+          transparent 65%
+        );
+    }
 
-Manual backup and restore features allow users to create and restore backup files. Users are responsible for choosing a secure storage location for exported backup files.
+    .eyebrow {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
 
-Automatic cloud backups depend on the availability and configuration of the selected provider, the permissions granted and the implementation of the relevant integration. Selecting a cloud provider does not, by itself, mean that automatic uploads are active.
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 60px);
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
 
-## 6. Sharing and Disclosure
+    .hero h1 span {
+      color: var(--green);
+    }
 
-NAVIX does not sell personal information.
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 17px;
+    }
 
-Information may be processed by service providers needed to operate enabled features, such as account authentication or cloud storage. Information may also be disclosed when legally required or when necessary to protect the security of the service.
+    .updated {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 7px 15px;
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      color: var(--muted);
+      font-size: 12px;
+    }
 
-Business or fleet features may involve access by authorised members of the relevant business workspace, depending on the permissions implemented for that feature.
+    .page-layout {
+      width: min(var(--max-width), 92%);
+      margin: 0 auto 90px;
+      display: grid;
+      grid-template-columns: 245px minmax(0, 1fr);
+      gap: 30px;
+      align-items: start;
+    }
 
-## 7. Retention and Deletion
+    .toc {
+      position: sticky;
+      top: 100px;
+      padding: 23px 18px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+    }
 
-Information may remain on your device or in backup files until you delete it. Information stored by third-party services may be subject to their retention and deletion processes.
+    .toc h2 {
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
 
-Before uninstalling NAVIX, changing devices or deleting records, create a backup if you need to preserve your information.
+    .toc a {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      padding: 8px 10px;
+      border-radius: 7px;
+    }
 
-## 8. Security
+    .toc a:hover {
+      color: var(--green);
+      background: var(--green-soft);
+      text-decoration: none;
+    }
 
-NAVIX is intended to protect user information through appropriate technical and organisational safeguards. No application, device or online storage service can guarantee absolute security.
+    .policy-content {
+      min-width: 0;
+    }
 
-Users should protect their devices, account credentials and backup files.
+    .intro-card {
+      background: linear-gradient(135deg, #14251b, var(--panel));
+      border: 1px solid #294532;
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 22px;
+    }
 
-## 9. Your Choices
+    .intro-card h2 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
 
-You can control the information you enter, the permissions you grant and whether you create manual backups. Availability of account-data access, correction and deletion options may depend on the features provided by NAVIX and its service providers.
+    .intro-card p {
+      color: #c4ceca;
+    }
 
-## 10. Children's Privacy
+    .policy-card {
+      scroll-margin-top: 100px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 27px 29px;
+      margin-bottom: 18px;
+      transition: border-color 0.2s ease;
+    }
 
-NAVIX is not intended to knowingly collect personal information from children without appropriate authorisation where required by applicable law.
+    .policy-card:hover {
+      border-color: #426b48;
+    }
 
-## 11. Changes to This Policy
+    .section-heading {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 16px;
+    }
 
-This Privacy Policy may be updated as NAVIX develops. The updated version and its effective date will be published on this page.
+    .section-number {
+      flex: 0 0 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--green-soft);
+      border: 1px solid rgba(89, 237, 53, 0.25);
+      color: var(--green);
+      font-size: 14px;
+      font-weight: bold;
+    }
 
-## 12. Contact
+    .section-heading h2 {
+      font-size: 19px;
+      line-height: 1.45;
+      padding-top: 5px;
+    }
 
-For privacy questions or requests, contact the NAVIX team through the official contact channel published on the NAVIX website.
+    .policy-card p {
+      color: #c1ccce;
+      margin-bottom: 13px;
+    }
 
-**Please note:** Replace this contact wording with a monitored email address before public release.
+    .policy-card p:last-child {
+      margin-bottom: 0;
+    }
 
+    .policy-card ul {
+      padding-left: 22px;
+      margin: 12px 0 16px;
+      color: #c1ccce;
+    }
+
+    .policy-card li {
+      padding-left: 4px;
+      margin-bottom: 7px;
+    }
+
+    .policy-card li::marker {
+      color: var(--green);
+    }
+
+    .notice {
+      border-left: 3px solid var(--green);
+      padding: 13px 17px;
+      margin-top: 15px;
+      background: var(--green-soft);
+      color: #d7e3d9;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--border);
+      background: #060a0c;
+      padding: 35px 20px;
+    }
+
+    .footer-inner {
+      width: min(1200px, 92%);
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+
+    .footer-brand span {
+      color: var(--green);
+    }
+
+    .footer-inner p {
+      color: #89989c;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #aab7ba;
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: var(--green);
+    }
+
+    @media (max-width: 760px) {
+      .nav-container {
+        min-height: 68px;
+        width: 90%;
+        gap: 15px;
+      }
+
+      .logo {
+        font-size: 21px;
+        letter-spacing: 2px;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 65px 20px 45px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .page-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .toc {
+        position: static;
+      }
+
+      .toc-links {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2px 8px;
+      }
+
+      .policy-card {
+        padding: 22px 19px;
+      }
+
+      .intro-card {
+        padding: 23px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .nav-container {
+        flex-direction: column;
+        justify-content: center;
+        padding: 13px 0;
+      }
+
+      .nav-links {
+        gap: 22px;
+      }
+
+      .toc-links {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading h2 {
+        font-size: 17px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a class="logo" href="index.html" aria-label="NAVIX home">
+        N<span>A</span>VIX
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#how-it-works">How it works</a>
+        <a href="privacy.html" class="active" aria-current="page">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Your data. Your records. Your control.</div>
+      <h1>Privacy <span>Policy</span></h1>
+      <p>
+        Transparency matters. Learn what information NAVIX may handle,
+        how it is used, and the choices you have when using the app.
+      </p>
+      <div class="updated">Last updated: 20 October 2026</div>
+    </section>
+
+    <div class="page-layout">
+      <aside class="toc">
+        <h2>On this page</h2>
+        <nav class="toc-links" aria-label="Privacy policy sections">
+          <a href="#introduction">Introduction</a>
+          <a href="#information">Information we handle</a>
+          <a href="#location">Location and trips</a>
+          <a href="#use">How information is used</a>
+          <a href="#storage">Storage and backups</a>
+          <a href="#sharing">Sharing and disclosure</a>
+          <a href="#retention">Data retention</a>
+          <a href="#security">Security</a>
+          <a href="#choices">Your choices</a>
+          <a href="#children">Children's privacy</a>
+          <a href="#changes">Policy changes</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </aside>
+
+      <div class="policy-content">
+        <section class="intro-card" id="introduction">
+          <h2>Privacy is part of the journey.</h2>
+          <p>
+            NAVIX is a digital logbook and vehicle-management application
+            designed to help users record vehicle trips, mileage, fuel
+            expenses, servicing and related records. This Privacy Policy
+            explains how information may be handled when you use NAVIX.
+          </p>
+        </section>
+
+        <section class="policy-card" id="information">
+          <div class="section-heading">
+            <div class="section-number">01</div>
+            <h2>Information We Handle</h2>
+          </div>
+          <p>Depending on the features you use, NAVIX may store:</p>
+          <ul>
+            <li>Your name and surname.</li>
+            <li>Account authentication information managed by the sign-in provider.</li>
+            <li>Vehicle details, including registration and odometer readings.</li>
+            <li>Trip dates, distances and business or personal classifications.</li>
+            <li>Fuel transactions, expenses and service records.</li>
+            <li>Invoices, photographs and documents you choose to save.</li>
+            <li>Business or company information you choose to provide.</li>
+            <li>Backup preferences and application settings.</li>
+          </ul>
+          <p>Only provide information that is necessary for your use of the application.</p>
+        </section>
+
+        <section class="policy-card" id="location">
+          <div class="section-heading">
+            <div class="section-number">02</div>
+            <h2>Location and Trip Information</h2>
+          </div>
+          <p>
+            If you use features that record or calculate trips, NAVIX may
+            process trip-related information, including dates, distances
+            and other information required by those features.
+          </p>
+          <p>
+            Location access, where applicable, depends on the permissions
+            you grant and the features enabled on your device. You can
+            manage location permissions in your device settings, although
+            some features may not work without them.
+          </p>
+        </section>
+
+        <section class="policy-card" id="use">
+          <div class="section-heading">
+            <div class="section-number">03</div>
+            <h2>How Information Is Used</h2>
+          </div>
+          <p>NAVIX may use information to:</p>
+          <ul>
+            <li>Maintain your digital vehicle logbook.</li>
+            <li>Record vehicle servicing, fuel and expenses.</li>
+            <li>Generate reports and spreadsheet exports.</li>
+            <li>Support account access and application functionality.</li>
+            <li>Improve reliability, protect user data and troubleshoot problems.</li>
+          </ul>
+        </section>
+
+        <section class="policy-card" id="storage">
+          <div class="section-heading">
+            <div class="section-number">04</div>
+            <h2>Storage and Backups</h2>
+          </div>
+          <p>
+            NAVIX may store information locally on your device and may use
+            authentication or cloud services where those features are enabled.
+          </p>
+          <p>
+            Manual backup and restore features allow users to create and
+            restore backup files. Users are responsible for choosing a
+            secure storage location for exported backup files.
+          </p>
+          <p>
+            Automatic cloud backups depend on the availability and
+            configuration of the selected provider, the permissions granted,
+            and the implementation of the relevant integration. Selecting
+            a cloud provider does not, by itself, mean that automatic uploads
+            are active.
+          </p>
+          <div class="notice">
+            Keep an independent backup of important records and check that
+            any backup you rely on was completed successfully.
+          </div>
+        </section>
+
+        <section class="policy-card" id="sharing">
+          <div class="section-heading">
+            <div class="section-number">05</div>
+            <h2>Sharing and Disclosure</h2>
+          </div>
+          <p>
+            NAVIX does not sell personal information. Information may be
+            processed by service providers needed to operate enabled features,
+            such as account authentication or cloud storage.
+          </p>
+          <p>
+            Information may also be disclosed when legally required or when
+            necessary to protect the security of the service. Business or
+            fleet features may involve access by authorised members of the
+            relevant business workspace, depending on the permissions
+            implemented for that feature.
+          </p>
+        </section>
+
+        <section class="policy-card" id="retention">
+          <div class="section-heading">
+            <div class="section-number">06</div>
+            <h2>Retention and Deletion</h2>
+          </div>
+          <p>
+            Information may remain on your device or in backup files until
+            you delete it. Information stored by third-party services may
+            be subject to their retention and deletion processes.
+          </p>
+          <p>
+            Before uninstalling NAVIX, changing devices or deleting records,
+            create a backup if you need to preserve your information.
+            Deleting information in one location may not automatically
+            delete copies held elsewhere.
+          </p>
+        </section>
+
+        <section class="policy-card" id="security">
+          <div class="section-heading">
+            <div class="section-number">07</div>
+            <h2>Security</h2>
+          </div>
+          <p>
+            NAVIX is intended to protect user information through appropriate
+            technical and organisational safeguards. No application, device
+            or online storage service can guarantee absolute security.
+          </p>
+          <p>
+            Users should protect their devices, account credentials and
+            backup files. Avoid sharing passwords or leaving sensitive
+            exports in publicly accessible locations.
+          </p>
+        </section>
+
+        <section class="policy-card" id="choices">
+          <div class="section-heading">
+            <div class="section-number">08</div>
+            <h2>Your Choices</h2>
+          </div>
+          <p>
+            You can control the information you enter, the permissions you
+            grant and whether you create manual backups. Availability of
+            account-data access, correction and deletion options may depend
+            on the features supported by NAVIX and its service providers.
+          </p>
+          <p>
+            You can also manage device permissions through your Android
+            settings. Restricting permissions may affect related features.
+          </p>
+        </section>
+
+        <section class="policy-card" id="children">
+          <div class="section-heading">
+            <div class="section-number">09</div>
+            <h2>Children's Privacy</h2>
+          </div>
+          <p>
+            NAVIX is not intended to knowingly collect personal information
+            from children without appropriate authorisation where required
+            by applicable law.
+          </p>
+        </section>
+
+        <section class="policy-card" id="changes">
+          <div class="section-heading">
+            <div class="section-number">10</div>
+            <h2>Changes to This Policy</h2>
+          </div>
+          <p>
+            This Privacy Policy may be updated as NAVIX develops. The updated
+            version and its effective date will be published on this page.
+            Please review this page periodically for changes.
+          </p>
+        </section>
+
+        <section class="policy-card" id="contact">
+          <div class="section-heading">
+            <div class="section-number">11</div>
+            <h2>Contact</h2>
+          </div>
+          <p>
+            For privacy questions or requests, contact the NAVIX team through
+            the official contact channel published on the NAVIX website.
+          </p>
+          <div class="notice">
+            Before public release, publish and verify a monitored contact
+            email address here and ensure requests can be handled reliably.
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">N<span>A</span>VIX</div>
+        <p>Your work. Your records. Your journey.</p>
+        <p>© <span id="year">2026</span> NAVIX. All rights reserved.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="privacy.html" aria-current="page">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
