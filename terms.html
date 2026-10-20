@@ -1,73 +1,689 @@
-# NAVIX Terms of Service
 
-**Last updated:** 20 October 2026
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d0f">
 
-## 1. Acceptance
+  <title>Terms of Service | NAVIX</title>
+  <meta name="description" content="Read the NAVIX Terms of Service covering app use, vehicle records, reports, backups and account responsibilities.">
 
-By accessing or using NAVIX, you agree to these Terms of Service. If you do not agree, do not use the application.
+  <style>
+    :root {
+      --bg: #080d0f;
+      --panel: #10191d;
+      --green: #59ed35;
+      --green-soft: rgba(89, 237, 53, 0.10);
+      --text: #f2f5f4;
+      --muted: #aab7ba;
+      --border: #26383e;
+      --max-width: 1000px;
+    }
 
-## 2. About NAVIX
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-NAVIX provides digital tools for vehicle logbooks, trip records, mileage reporting, fuel and expense records, servicing information, backups and other management features as they become available.
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
 
-Features may change as the application develops.
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      min-height: 100vh;
+    }
 
-## 3. User Responsibilities
+    a {
+      color: var(--green);
+      text-decoration: none;
+    }
 
-You are responsible for:
+    a:hover {
+      text-decoration: underline;
+    }
 
-- Providing accurate information where reasonably possible.
-- Reviewing trip distances, odometer readings, expenses and reports before relying on them.
-- Keeping your sign-in credentials secure.
-- Protecting exported records and backup files.
-- Ensuring you have permission to enter or store information relating to other people, vehicles or businesses.
-- Using NAVIX in compliance with applicable laws and workplace requirements.
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 13, 15, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
 
-## 4. Reports and Tax Records
+    .nav-container {
+      width: min(1200px, 92%);
+      min-height: 76px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
 
-NAVIX can help organise mileage and related records and generate exports. It does not guarantee that every record or report will satisfy SARS, an employer, an auditor or another authority.
+    .logo {
+      color: var(--text);
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      white-space: nowrap;
+    }
 
-You remain responsible for checking the accuracy and completeness of your records and confirming the requirements that apply to your circumstances.
+    .logo span,
+    .footer-brand span {
+      color: var(--green);
+    }
 
-## 5. Backups and Data Loss
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
 
-You should maintain suitable backups of important records.
+    .nav-links a {
+      color: #c4ced0;
+      font-size: 14px;
+      transition: color 0.2s ease;
+    }
 
-Manual backup and restore functionality is subject to the features available in your version of NAVIX. Automatic cloud backup is only available when the relevant provider integration is implemented, authorised and operating successfully.
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--green);
+    }
 
-NAVIX cannot guarantee that a backup will succeed in every circumstance. Check backup status and retain independent copies of important information.
+    .hero {
+      padding: 90px 20px 65px;
+      text-align: center;
+      background:
+        radial-gradient(
+          ellipse at 50% 0%,
+          rgba(53, 151, 43, 0.20),
+          transparent 65%
+        );
+    }
 
-## 6. Third-Party Services
+    .eyebrow {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
 
-NAVIX may use third-party services for authentication, hosting or cloud storage. Your use of those services may also be subject to their terms and privacy policies.
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 60px);
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
 
-Choosing a provider does not automatically grant access or establish a working integration.
+    .hero h1 span {
+      color: var(--green);
+    }
 
-## 7. Acceptable Use
+    .hero p {
+      max-width: 680px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 17px;
+    }
 
-You must not misuse NAVIX, attempt to access data without authorisation, interfere with its operation or use it for unlawful purposes.
+    .updated {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 7px 15px;
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      color: var(--muted);
+      font-size: 12px;
+    }
 
-## 8. Availability and Changes
+    .page-layout {
+      width: min(var(--max-width), 92%);
+      margin: 0 auto 90px;
+      display: grid;
+      grid-template-columns: 245px minmax(0, 1fr);
+      gap: 30px;
+      align-items: start;
+    }
 
-NAVIX is provided subject to availability. Features may be updated, suspended or discontinued where reasonably necessary for maintenance, security or product development.
+    .toc {
+      position: sticky;
+      top: 100px;
+      padding: 23px 18px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+    }
 
-## 9. Limitation of Responsibility
+    .toc h2 {
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
 
-To the extent permitted by applicable law, NAVIX is not responsible for decisions made solely on the basis of unverified records, incorrect user entries, failed backups or third-party service interruptions.
+    .toc a {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      padding: 8px 10px;
+      border-radius: 7px;
+    }
 
-Nothing in these Terms excludes rights or liabilities that cannot legally be excluded under South African law.
+    .toc a:hover {
+      color: var(--green);
+      background: var(--green-soft);
+      text-decoration: none;
+    }
 
-## 10. Termination
+    .policy-content {
+      min-width: 0;
+    }
 
-You should stop using NAVIX if you do not agree to these Terms. Before removing the application or closing an account, export or back up any information you need to retain.
+    .intro-card {
+      background: linear-gradient(135deg, #14251b, var(--panel));
+      border: 1px solid #294532;
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 22px;
+    }
 
-## 11. Changes to These Terms
+    .intro-card h2 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
 
-These Terms may be updated as NAVIX develops. The latest version and its effective date will be published on this page.
+    .intro-card p {
+      color: #c4ceca;
+    }
 
-## 12. Contact
+    .policy-card {
+      scroll-margin-top: 100px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 27px 29px;
+      margin-bottom: 18px;
+      transition: border-color 0.2s ease;
+    }
 
-For questions about these Terms, contact the NAVIX team through the official contact channel published on the NAVIX website.
+    .policy-card:hover {
+      border-color: #426b48;
+    }
 
-**Please note:** Replace this contact wording with a monitored email address before public release.
+    .section-heading {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 16px;
+    }
 
+    .section-number {
+      flex: 0 0 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--green-soft);
+      border: 1px solid rgba(89, 237, 53, 0.25);
+      color: var(--green);
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .section-heading h2 {
+      font-size: 19px;
+      line-height: 1.45;
+      padding-top: 5px;
+    }
+
+    .policy-card p {
+      color: #c1ccce;
+      margin-bottom: 13px;
+    }
+
+    .policy-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-card ul {
+      padding-left: 22px;
+      margin: 12px 0 16px;
+      color: #c1ccce;
+    }
+
+    .policy-card li {
+      padding-left: 4px;
+      margin-bottom: 7px;
+    }
+
+    .policy-card li::marker {
+      color: var(--green);
+    }
+
+    .notice {
+      border-left: 3px solid var(--green);
+      padding: 13px 17px;
+      margin-top: 15px;
+      background: var(--green-soft);
+      color: #d7e3d9;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--border);
+      background: #060a0c;
+      padding: 35px 20px;
+    }
+
+    .footer-inner {
+      width: min(1200px, 92%);
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+
+    .footer-inner p {
+      color: #89989c;
+      font-size: 12px;
+      margin-top: 5px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #aab7ba;
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: var(--green);
+    }
+
+    @media (max-width: 760px) {
+      .nav-container {
+        min-height: 68px;
+        width: 90%;
+        gap: 15px;
+      }
+
+      .logo {
+        font-size: 21px;
+        letter-spacing: 2px;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 65px 20px 45px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .page-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .toc {
+        position: static;
+      }
+
+      .toc-links {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2px 8px;
+      }
+
+      .policy-card {
+        padding: 22px 19px;
+      }
+
+      .intro-card {
+        padding: 23px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .nav-container {
+        flex-direction: column;
+        justify-content: center;
+        padding: 13px 0;
+      }
+
+      .nav-links {
+        gap: 22px;
+      }
+
+      .toc-links {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading h2 {
+        font-size: 17px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a class="logo" href="index.html" aria-label="NAVIX home">
+        N<span>A</span>VIX
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#how-it-works">How it works</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html" class="active" aria-current="page">Terms</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Clear expectations. Better journeys.</div>
+      <h1>Terms of <span>Service</span></h1>
+      <p>
+        These terms explain the responsibilities and conditions that apply
+        when you use NAVIX and its vehicle logbook and management features.
+      </p>
+      <div class="updated">Last updated: 20 October 2026</div>
+    </section>
+
+    <div class="page-layout">
+      <aside class="toc">
+        <h2>On this page</h2>
+        <nav class="toc-links" aria-label="Terms sections">
+          <a href="#acceptance">Acceptance</a>
+          <a href="#about">About NAVIX</a>
+          <a href="#responsibilities">Your responsibilities</a>
+          <a href="#reports">Reports and tax records</a>
+          <a href="#backups">Backups and data loss</a>
+          <a href="#third-party">Third-party services</a>
+          <a href="#acceptable-use">Acceptable use</a>
+          <a href="#availability">Availability and changes</a>
+          <a href="#liability">Limitation of responsibility</a>
+          <a href="#termination">Termination</a>
+          <a href="#changes">Changes to these terms</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </aside>
+
+      <div class="policy-content">
+        <section class="intro-card" id="acceptance">
+          <h2>Built for the road. Used responsibly.</h2>
+          <p>
+            NAVIX provides digital tools to help organise vehicle trips,
+            mileage, fuel, servicing and related records. These Terms of
+            Service set out the basic conditions for using the application.
+            Please read them before using NAVIX.
+          </p>
+        </section>
+
+        <section class="policy-card">
+          <div class="section-heading">
+            <div class="section-number">01</div>
+            <h2>Acceptance of These Terms</h2>
+          </div>
+          <p>
+            By accessing or using NAVIX, you agree to these Terms of Service.
+            If you do not agree, do not use the application.
+          </p>
+          <p>
+            If you use NAVIX on behalf of a company or organisation, you
+            confirm that you are authorised to accept these terms on its
+            behalf where applicable.
+          </p>
+        </section>
+
+        <section class="policy-card" id="about">
+          <div class="section-heading">
+            <div class="section-number">02</div>
+            <h2>About NAVIX</h2>
+          </div>
+          <p>
+            NAVIX provides digital tools for vehicle logbooks, trip records,
+            mileage reporting, fuel and expense records, servicing information,
+            backups and other management features as they become available.
+          </p>
+          <p>
+            Features may change as the application develops. The availability
+            of a particular feature may depend on your app version, account
+            type, permissions, device and any required service integrations.
+          </p>
+        </section>
+
+        <section class="policy-card" id="responsibilities">
+          <div class="section-heading">
+            <div class="section-number">03</div>
+            <h2>Your Responsibilities</h2>
+          </div>
+          <p>When using NAVIX, you are responsible for:</p>
+          <ul>
+            <li>Providing accurate information where reasonably possible.</li>
+            <li>Reviewing trip distances, odometer readings, expenses and reports before relying on them.</li>
+            <li>Keeping your sign-in credentials secure.</li>
+            <li>Protecting exported records and backup files.</li>
+            <li>Ensuring you have permission to enter or store information relating to other people, vehicles or businesses.</li>
+            <li>Using NAVIX in compliance with applicable laws and workplace requirements.</li>
+          </ul>
+        </section>
+
+        <section class="policy-card" id="reports">
+          <div class="section-heading">
+            <div class="section-number">04</div>
+            <h2>Reports and Tax Records</h2>
+          </div>
+          <p>
+            NAVIX can help organise mileage and related records and generate
+            exports. It does not guarantee that every record or report will
+            satisfy SARS, an employer, an auditor or another authority.
+          </p>
+          <p>
+            You remain responsible for checking the accuracy and completeness
+            of your records and confirming the requirements that apply to
+            your circumstances.
+          </p>
+          <div class="notice">
+            Always review your exported records before submitting them for
+            tax, reimbursement, audit or workplace purposes.
+          </div>
+        </section>
+
+        <section class="policy-card" id="backups">
+          <div class="section-heading">
+            <div class="section-number">05</div>
+            <h2>Backups and Data Loss</h2>
+          </div>
+          <p>
+            You should maintain suitable backups of important records.
+            Manual backup and restore functionality is subject to the
+            features available in your version of NAVIX.
+          </p>
+          <p>
+            Automatic cloud backup is only available when the relevant
+            provider integration is implemented, authorised and operating
+            successfully. NAVIX cannot guarantee that a backup will succeed
+            in every circumstance.
+          </p>
+          <p>
+            Check backup status and retain independent copies of important
+            information. Before uninstalling the app, changing devices or
+            deleting records, export or back up any information you need
+            to retain.
+          </p>
+        </section>
+
+        <section class="policy-card" id="third-party">
+          <div class="section-heading">
+            <div class="section-number">06</div>
+            <h2>Third-Party Services</h2>
+          </div>
+          <p>
+            NAVIX may use third-party services for authentication, hosting
+            or cloud storage. Your use of those services may also be subject
+            to their own terms and privacy policies.
+          </p>
+          <p>
+            Choosing a provider does not automatically grant NAVIX access
+            or establish a working integration. Such access depends on the
+            permissions and configuration required for the relevant feature.
+          </p>
+        </section>
+
+        <section class="policy-card" id="acceptable-use">
+          <div class="section-heading">
+            <div class="section-number">07</div>
+            <h2>Acceptable Use</h2>
+          </div>
+          <p>You must not misuse NAVIX, including by attempting to:</p>
+          <ul>
+            <li>Access data without authorisation.</li>
+            <li>Interfere with the application's operation or security.</li>
+            <li>Use NAVIX for unlawful purposes.</li>
+            <li>Upload or store information you have no right to use.</li>
+            <li>Misrepresent records knowingly or use the application to facilitate fraud.</li>
+          </ul>
+        </section>
+
+        <section class="policy-card" id="availability">
+          <div class="section-heading">
+            <div class="section-number">08</div>
+            <h2>Availability and Changes</h2>
+          </div>
+          <p>
+            NAVIX is provided subject to availability. Features may be
+            updated, suspended or discontinued where reasonably necessary
+            for maintenance, security or product development.
+          </p>
+          <p>
+            We will aim to keep the application useful and reliable, but
+            uninterrupted access cannot be guaranteed.
+          </p>
+        </section>
+
+        <section class="policy-card" id="liability">
+          <div class="section-heading">
+            <div class="section-number">09</div>
+            <h2>Limitation of Responsibility</h2>
+          </div>
+          <p>
+            To the extent permitted by applicable law, NAVIX is not
+            responsible for decisions made solely on the basis of
+            unverified records, incorrect user entries, failed backups
+            or third-party service interruptions.
+          </p>
+          <p>
+            Nothing in these terms excludes rights or liabilities that
+            cannot legally be excluded under applicable South African law.
+          </p>
+        </section>
+
+        <section class="policy-card" id="termination">
+          <div class="section-heading">
+            <div class="section-number">10</div>
+            <h2>Termination and Your Records</h2>
+          </div>
+          <p>
+            You should stop using NAVIX if you do not agree to these terms.
+            Before removing the application or closing an account, export
+            or back up any information you need to retain.
+          </p>
+          <p>
+            Deleting the application may not delete information already
+            exported or stored by a third-party service.
+          </p>
+        </section>
+
+        <section class="policy-card" id="changes">
+          <div class="section-heading">
+            <div class="section-number">11</div>
+            <h2>Changes to These Terms</h2>
+          </div>
+          <p>
+            These terms may be updated as NAVIX develops. The latest version
+            and its effective date will be published on this page. Continued
+            use after an update takes effect may be subject to the revised
+            terms, to the extent permitted by applicable law.
+          </p>
+        </section>
+
+        <section class="policy-card" id="contact">
+          <div class="section-heading">
+            <div class="section-number">12</div>
+            <h2>Contact</h2>
+          </div>
+          <p>
+            For questions about these Terms of Service, contact the NAVIX
+            team through the official contact channel published on the
+            NAVIX website.
+          </p>
+          <div class="notice">
+            Before public release, publish and verify a monitored contact
+            email address and ensure that enquiries can be handled reliably.
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">N<span>A</span>VIX</div>
+        <p>Your work. Your records. Your journey.</p>
+        <p>© <span id="year">2026</span> NAVIX. All rights reserved.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html" aria-current="page">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
